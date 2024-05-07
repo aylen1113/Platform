@@ -36,9 +36,9 @@ public class VictoryZone : MonoBehaviour
         SceneManager.LoadScene("Game");
 
     }
-    public void MainMenu()
+    public void Quit()
     {
-        SceneManager.LoadScene("MainMenu");
+        Application.Quit();
 
     }
 
