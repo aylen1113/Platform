@@ -7,12 +7,17 @@ public class CoinPickup : MonoBehaviour
     public int value;
 
     public float turnSpeed = 90f;
+
+    public GameObject pickupEffect;
+
     private void OnTriggerEnter(Collider other)
+  
     {
         if (other.tag == "Player")
         {
             FindObjectOfType<GameManager>().AddCoins(value);
 
+            Instantiate(pickupEffect, transform.position, transform.rotation);
             Destroy(gameObject);
 
         }

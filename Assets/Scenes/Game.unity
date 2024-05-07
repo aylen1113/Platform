@@ -183,7 +183,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8046046245552367290, guid: 81a7d387e8732044da512ec665fd3b56, type: 3}
+    - {fileID: 8540315777436839377, guid: 81a7d387e8732044da512ec665fd3b56, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -215,6 +217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 1
   turnSpeed: 90
+  pickupEffect: {fileID: 1841832174}
 --- !u!4 &146355038 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5540773946323059009, guid: 81a7d387e8732044da512ec665fd3b56, type: 3}
@@ -1101,6 +1104,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 8046046245552367290, guid: 81a7d387e8732044da512ec665fd3b56, type: 3}
+      propertyPath: pickupEffect
+      value: 
+      objectReference: {fileID: 1841832174}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2691,6 +2698,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 8046046245552367290, guid: 81a7d387e8732044da512ec665fd3b56, type: 3}
+      propertyPath: pickupEffect
+      value: 
+      objectReference: {fileID: 1841832174}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3094,6 +3105,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin
       objectReference: {fileID: 0}
+    - target: {fileID: 8046046245552367290, guid: 81a7d387e8732044da512ec665fd3b56, type: 3}
+      propertyPath: pickupEffect
+      value: 
+      objectReference: {fileID: 1841832174}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3705,6 +3720,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8046046245552367290, guid: 81a7d387e8732044da512ec665fd3b56, type: 3}
+      propertyPath: pickupEffect
+      value: 
+      objectReference: {fileID: 1841832174}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3998,14 +4017,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1654042549}
     m_Modifications:
-    - target: {fileID: 1045449133462978239, guid: 81a7d387e8732044da512ec665fd3b56, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5540773946323059009, guid: 81a7d387e8732044da512ec665fd3b56, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.048112005
-      objectReference: {fileID: 0}
     - target: {fileID: 5540773946323059009, guid: 81a7d387e8732044da512ec665fd3b56, type: 3}
       propertyPath: m_LocalPosition.x
       value: -13.97
@@ -4050,38 +4061,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8046046245552367290, guid: 81a7d387e8732044da512ec665fd3b56, type: 3}
+      propertyPath: pickupEffect
+      value: 
+      objectReference: {fileID: 1841832174}
+    m_RemovedComponents:
+    - {fileID: 8540315777436839377, guid: 81a7d387e8732044da512ec665fd3b56, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6510929123371689319, guid: 81a7d387e8732044da512ec665fd3b56, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1677879268}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81a7d387e8732044da512ec665fd3b56, type: 3}
 --- !u!4 &1677879266 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5540773946323059009, guid: 81a7d387e8732044da512ec665fd3b56, type: 3}
   m_PrefabInstance: {fileID: 1677879265}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1677879267 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6510929123371689319, guid: 81a7d387e8732044da512ec665fd3b56, type: 3}
-  m_PrefabInstance: {fileID: 1677879265}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1677879268
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1677879267}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adeabc28312fd6b48b7afc97aaac134d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  value: 1
-  turnSpeed: 90
 --- !u!1 &1813266580
 GameObject:
   m_ObjectHideFlags: 0
@@ -4325,10 +4319,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 1
   turnSpeed: 90
+  pickupEffect: {fileID: 1841832174}
 --- !u!4 &1833491433 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5540773946323059009, guid: 81a7d387e8732044da512ec665fd3b56, type: 3}
   m_PrefabInstance: {fileID: 666565775}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1841832174 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7093388991371944728, guid: 410b3e448f9380543973f62adeaf6417, type: 3}
+  m_PrefabInstance: {fileID: 3548438673549795547}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1847994059
 GameObject:
@@ -4625,6 +4625,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8046046245552367290, guid: 81a7d387e8732044da512ec665fd3b56, type: 3}
+      propertyPath: pickupEffect
+      value: 
+      objectReference: {fileID: 1841832174}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5000,10 +5004,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 1654042549}
     m_Modifications:
     - target: {fileID: 5540773946323059009, guid: 81a7d387e8732044da512ec665fd3b56, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.04811201
-      objectReference: {fileID: 0}
-    - target: {fileID: 5540773946323059009, guid: 81a7d387e8732044da512ec665fd3b56, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.848907
       objectReference: {fileID: 0}
@@ -5047,6 +5047,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8046046245552367290, guid: 81a7d387e8732044da512ec665fd3b56, type: 3}
+      propertyPath: pickupEffect
+      value: 
+      objectReference: {fileID: 1841832174}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5104,6 +5108,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8046046245552367290, guid: 81a7d387e8732044da512ec665fd3b56, type: 3}
+      propertyPath: pickupEffect
+      value: 
+      objectReference: {fileID: 1841832174}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5114,6 +5122,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5540773946323059009, guid: 81a7d387e8732044da512ec665fd3b56, type: 3}
   m_PrefabInstance: {fileID: 2137105267}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3548438673549795547
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5273235014505467336, guid: 410b3e448f9380543973f62adeaf6417, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.7728786
+      objectReference: {fileID: 0}
+    - target: {fileID: 5273235014505467336, guid: 410b3e448f9380543973f62adeaf6417, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.490497
+      objectReference: {fileID: 0}
+    - target: {fileID: 5273235014505467336, guid: 410b3e448f9380543973f62adeaf6417, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.8154335
+      objectReference: {fileID: 0}
+    - target: {fileID: 5273235014505467336, guid: 410b3e448f9380543973f62adeaf6417, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5273235014505467336, guid: 410b3e448f9380543973f62adeaf6417, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5273235014505467336, guid: 410b3e448f9380543973f62adeaf6417, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5273235014505467336, guid: 410b3e448f9380543973f62adeaf6417, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5273235014505467336, guid: 410b3e448f9380543973f62adeaf6417, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5273235014505467336, guid: 410b3e448f9380543973f62adeaf6417, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5273235014505467336, guid: 410b3e448f9380543973f62adeaf6417, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7093388991371944728, guid: 410b3e448f9380543973f62adeaf6417, type: 3}
+      propertyPath: m_Name
+      value: Coin Effect
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 410b3e448f9380543973f62adeaf6417, type: 3}
 --- !u!1001 &7239399455231537257
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5166,6 +5231,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin
       objectReference: {fileID: 0}
+    - target: {fileID: 8046046245552367290, guid: 81a7d387e8732044da512ec665fd3b56, type: 3}
+      propertyPath: pickupEffect
+      value: 
+      objectReference: {fileID: 1841832174}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5186,3 +5255,4 @@ SceneRoots:
   - {fileID: 497328803}
   - {fileID: 1820079019}
   - {fileID: 1654042549}
+  - {fileID: 3548438673549795547}
