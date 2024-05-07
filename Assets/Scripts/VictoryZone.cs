@@ -16,7 +16,7 @@ public class VictoryZone : MonoBehaviour
         victoryScreen.SetActive(false);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter(Collision collision)
     {
 
         if (collision.gameObject.CompareTag("Player"))
